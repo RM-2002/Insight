@@ -45,7 +45,7 @@ router.put("/:id", async (req, res) => {
         }
       );
 
-      res.status(200).json({ message: "User information updated successfully", ...updatedUser });
+      res.status(200).json({ message: "User information updated successfully", ...updatedUser._doc });
     } catch (err) {
       res.status(500).json({ error: "An error occurred while updating user information", err });
     }
